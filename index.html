@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>小八 · Xiaoba</title>
+  <meta name="description" content="让小八陪你一起工作。免费体验可互动的 Codex 小八宠物，下载动画包，或在 GitHub 给它一颗 Star。">
+  <meta name="theme-color" content="#f3f5fb">
+  <style>
+    :root { color-scheme: light; --ink:#182230; --muted:#667085; --line:#dfe5ee; --card:rgba(255,255,255,.78); --accent:#7b61ff; --accent-2:#53b5ff; --wash:#f3f5fb; }
+    :root[data-theme="dark"] { color-scheme: dark; --ink:#eef2fa; --muted:#aab5c8; --line:#303b4d; --card:rgba(25,32,44,.82); --wash:#121822; }
+    * { box-sizing: border-box; }
+    body { min-width:320px; margin:0; font:15px/1.45 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; color:var(--ink); background:radial-gradient(circle at 15% 0%,#dceeff 0,transparent 38%),radial-gradient(circle at 90% 10%,#e9ddff 0,transparent 35%),var(--wash); transition:background .25s,color .25s; }
+    [data-theme="dark"] body { background:radial-gradient(circle at 15% 0%,#1b3152 0,transparent 40%),radial-gradient(circle at 90% 10%,#302348 0,transparent 35%),var(--wash); }
+    main { width:min(760px,calc(100% - 32px)); margin:0 auto; padding:clamp(28px,7vw,64px) 0 26px; }
+    .eyebrow { margin:0 0 5px; color:var(--accent); font-weight:750; letter-spacing:.09em; text-transform:uppercase; font-size:11px; }
+    h1 { margin:0; font-size:clamp(28px,6vw,42px); letter-spacing:-.045em; line-height:1.04; }
+    .lede { margin:12px 0 0; color:var(--muted); max-width:520px; }
+    .links { display:flex; flex-wrap:wrap; gap:10px; margin-top:20px; }
+    .links a { display:inline-flex; align-items:center; justify-content:center; gap:6px; min-height:44px; padding:10px 17px; border:1px solid var(--line); border-radius:12px; text-decoration:none; font-weight:700; color:var(--ink); background:var(--card); }
+    .links .primary { background:#6650d9; border-color:#6650d9; color:#fff; }
+    a:focus-visible { outline:3px solid #9a8aff; outline-offset:3px; }
+    footer a { color:inherit; text-underline-offset:3px; }
+    .card { margin-top:26px; padding:clamp(18px,4vw,28px); border:1px solid var(--line); border-radius:24px; background:var(--card); box-shadow:0 16px 46px rgba(29,42,76,.11); backdrop-filter:blur(12px); }
+    .stage { min-height:300px; display:grid; place-items:center; border:1px solid var(--line); border-radius:18px; background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(210,220,239,.34)); overflow:hidden; position:relative; }
+    [data-theme="dark"] .stage { background:linear-gradient(135deg,rgba(50,64,86,.35),rgba(8,12,19,.28)); }
+    .pet { width:192px; height:208px; background-image:url("spritesheet.webp?v=3878ff16fa71"); background-size:1536px 2288px; background-repeat:no-repeat; image-rendering:auto; }
+    .stage.asset-missing .pet { display:none; }
+    .missing { display:none; text-align:center; max-width:330px; padding:20px; color:var(--muted); }
+    .stage.asset-missing .missing { display:block; }
+    .missing strong { display:block; margin-bottom:5px; color:var(--ink); }
+    .meta { display:flex; justify-content:space-between; align-items:center; gap:12px; margin:17px 2px 0; color:var(--muted); font-size:13px; }
+    .meta span:last-child { color:var(--ink); font-weight:650; }
+    .controls { display:grid; grid-template-columns:1fr auto auto; gap:10px; align-items:end; margin-top:22px; }
+    label { display:block; color:var(--muted); font-size:12px; font-weight:650; margin:0 0 6px; }
+    select,button { border:1px solid var(--line); border-radius:11px; background:var(--card); color:var(--ink); font:inherit; min-height:42px; padding:0 13px; cursor:pointer; }
+    select { width:100%; }
+    button { font-weight:650; white-space:nowrap; transition:transform .15s,border-color .15s,background .15s; }
+    button:hover { border-color:var(--accent); transform:translateY(-1px); }
+    button:focus-visible,select:focus-visible { outline:3px solid rgba(123,97,255,.28); outline-offset:2px; }
+    .theme { display:flex; gap:8px; margin-top:14px; }
+    .theme button { min-height:36px; padding:0 11px; font-size:13px; }
+    .theme button[aria-pressed="true"] { border-color:var(--accent); background:rgba(123,97,255,.12); color:var(--accent); }
+    footer { margin-top:25px; text-align:center; color:var(--muted); font-size:12px; }
+    @media (max-width:520px) { main { width:min(100% - 20px,760px); padding-top:28px; } .card { padding:14px; border-radius:19px; } .controls { grid-template-columns:1fr 1fr; } .controls > div:first-child { grid-column:1/-1; } .stage { min-height:270px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">你的桌面伙伴</p>
+    <h1>小八 Xiaoba</h1>
+    <p class="lede">让小八陪你一起工作。切换动作，或选择环视后移动鼠标。</p>
+    <nav class="links" aria-label="下载与分享">
+      <a class="primary" href="https://github.com/hardwork-xu/xiaoba-codex-pet/releases/latest/download/Xiaoba-pet.zip">带小八回家 ↓</a>
+      <a href="https://github.com/hardwork-xu/xiaoba-codex-pet" target="_blank" rel="noopener noreferrer">⭐ 给小八一颗 Star</a>
+      <a href="https://github.com/hardwork-xu/xiaoba-codex-pet#install" target="_blank" rel="noopener noreferrer">安装说明</a>
+    </nav>
+    <section class="card" aria-label="Xiaoba preview">
+      <div class="stage" id="stage">
+        <div class="pet" id="pet" role="img" aria-label="Xiaoba sprite preview"></div>
+        <div class="missing"><strong>找不到宠物图片</strong>请将 <code>spritesheet.webp</code> 与本页面放在同一文件夹。</div>
+      </div>
+      <div class="meta"><span id="stateHint">待机 · 轻轻呼吸</span><span id="frameCount">第 1 / 6 帧</span></div>
+      <div class="controls">
+        <div><label for="state">动作</label><select id="state">
+          <option value="idle">待机</option><option value="running-right">向右跑</option><option value="running-left">向左跑</option><option value="waving">挥手</option><option value="jumping">跳跃</option><option value="failed">失落</option><option value="waiting">等待</option><option value="running">工作</option><option value="review">查看结果</option><option value="look">环视</option>
+        </select></div>
+        <button id="pause" type="button" aria-pressed="false">暂停</button>
+        <button id="theme" type="button" aria-label="切换浅色和深色背景">☾</button>
+      </div>
+      <div class="theme" aria-label="Background"><button type="button" data-mode="light" aria-pressed="true">浅色</button><button type="button" data-mode="dark" aria-pressed="false">深色</button></div>
+    </section>
+    <footer>小八 · Xiaoba · 非官方同人宠物<br>喜欢它的话，欢迎分享给朋友，或在 <a href="https://github.com/hardwork-xu/xiaoba-codex-pet" target="_blank" rel="noopener noreferrer">GitHub</a> 留下一颗 Star。</footer>
+  </main>
+  <script>
+    (() => {
+      const rows = {
+        idle:[280,110,110,140,140,320], 'running-right':[120,120,120,120,120,120,120,220], 'running-left':[120,120,120,120,120,120,120,220], waving:[140,140,140,280], jumping:[140,140,140,140,280], failed:[140,140,140,140,140,140,140,240], waiting:[150,150,150,150,150,260], running:[120,120,120,120,120,220], review:[150,150,150,150,150,280]
+      };
+      const names = { idle:'待机 · 轻轻呼吸', 'running-right':'向右跑', 'running-left':'向左跑', waving:'挥手 · 你好呀', jumping:'跳跃', failed:'失落 · 再试一次', waiting:'等待 · 到你啦', running:'工作 · 认真思考', review:'查看结果', look:'环视 · 跟随鼠标' };
+      const pet = document.getElementById('pet'), stage = document.getElementById('stage'), state = document.getElementById('state'), pause = document.getElementById('pause'), frameCount = document.getElementById('frameCount'), stateHint = document.getElementById('stateHint'), theme = document.getElementById('theme');
+      let frame = 0, timer = 0, paused = false, lookAngle = 0, lookNeutral = true, current = 'idle';
+      const setSprite = () => { const neutral = current === 'look' && lookNeutral; const row = neutral ? 0 : current === 'look' ? (lookAngle < 8 ? 9 : 10) : ({idle:0,'running-right':1,'running-left':2,waving:3,jumping:4,failed:5,waiting:6,running:7,review:8}[current]); const count = neutral ? rows.idle.length : current === 'look' ? 16 : rows[current].length; const index = neutral ? frame % rows.idle.length : current === 'look' ? lookAngle % 8 : frame; pet.style.backgroundPosition = `-${index * 192}px -${row * 208}px`; frameCount.textContent = current === 'look' && !neutral ? '环视 ' + (lookAngle * 22.5) + '°' : `第 ${index + 1} / ${count} 帧`; stateHint.textContent = neutral ? '待机 · 轻轻呼吸' : names[current]; };
+      const schedule = () => { clearTimeout(timer); if (paused) return; const neutral = current === 'look' && lookNeutral, duration = neutral ? rows.idle[frame % rows.idle.length] : current === 'look' ? 180 : rows[current][frame]; timer = setTimeout(() => { frame = (frame + 1) % (neutral ? rows.idle.length : current === 'look' ? 1 : rows[current].length); setSprite(); schedule(); }, duration); };
+      state.addEventListener('change', () => { current = state.value; frame = 0; setSprite(); schedule(); });
+      pause.addEventListener('click', () => { paused = !paused; pause.textContent = paused ? '播放' : '暂停'; pause.setAttribute('aria-pressed', String(paused)); if (paused) clearTimeout(timer); else schedule(); });
+      const setTheme = mode => { document.documentElement.dataset.theme = mode; document.querySelectorAll('[data-mode]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.mode === mode))); theme.textContent = mode === 'dark' ? '☀' : '☾'; };
+      document.querySelectorAll('[data-mode]').forEach(b => b.addEventListener('click', () => setTheme(b.dataset.mode))); theme.addEventListener('click', () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+      stage.addEventListener('pointermove', e => { if (current !== 'look' || paused) return; const r = stage.getBoundingClientRect(), dx = e.clientX - (r.left + r.width / 2), dy = e.clientY - (r.top + r.height / 2); if (Math.hypot(dx,dy) < 34) { lookNeutral = true; lookAngle = 0; } else { lookNeutral = false; lookAngle = Math.round(Math.atan2(dx, -dy) / (Math.PI / 8) + 16) % 16; } setSprite(); schedule(); });
+      stage.addEventListener('pointerleave', () => { if (current !== 'look' || paused) return; lookNeutral = true; lookAngle = 0; frame = 0; setSprite(); schedule(); });
+      const probe = new Image(); probe.onload = () => stage.classList.remove('asset-missing'); probe.onerror = () => stage.classList.add('asset-missing'); probe.src = 'spritesheet.webp?v=3878ff16fa71';
+      setTheme('light'); setSprite(); schedule();
+    })();
+  </script>
+</body>
+</html>
