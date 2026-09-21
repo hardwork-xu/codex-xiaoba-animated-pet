@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Xiaoba Animated Pet for Codex / Codex 小八动态宠物
 # Install the two pet files. Keep any previous Xiaoba installation as a backup.
 set -eu
 

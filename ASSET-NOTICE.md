@@ -6,4 +6,4 @@
 
 The spritesheet and preview GIFs are unofficial fan-made animation assets based on a Xiaoba model and reference photography. They are excluded from the code's MIT license. To the extent the maintainer can license the newly contributed work, you may download, copy, and adapt it for personal desktop-pet use and noncommercial fan sharing, keeping this notice and a link to this repository. This does not grant rights to the underlying character, reference materials, or third-party trademarks, or imply endorsement.
 
-Project: https://github.com/hardwork-xu/xiaoba-codex-pet
+Project: https://github.com/hardwork-xu/codex-xiaoba-animated-pet

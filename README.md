@@ -1,6 +1,6 @@
 <div align="center">
 
-# 小八 Xiaoba · Codex Pet
+# Xiaoba Animated Pet for Codex · Codex 小八动态宠物
 
 让小八陪你写代码、等结果、一起摸鱼。
 
@@ -8,7 +8,7 @@ A tiny blue-and-white companion for your Codex desktop.
 
 <img src="assets/waving.gif" width="192" height="208" alt="小八向你挥手 / Xiaoba waving hello">
 
-**[在线逗逗小八](https://hardwork-xu.github.io/xiaoba-codex-pet/) · [下载宠物包](https://github.com/hardwork-xu/xiaoba-codex-pet/releases/latest/download/Xiaoba-pet.zip) · [⭐ 给小八一颗 Star](https://github.com/hardwork-xu/xiaoba-codex-pet)**
+**[在线逗逗小八](https://hardwork-xu.github.io/codex-xiaoba-animated-pet/) · [下载宠物包](https://github.com/hardwork-xu/codex-xiaoba-animated-pet/releases/latest/download/Xiaoba-pet.zip) · [⭐ 给小八一颗 Star](https://github.com/hardwork-xu/codex-xiaoba-animated-pet)**
 
 喜欢这个小家伙的话，点一下仓库右上角的 **Star**，也欢迎分享给朋友。
 
@@ -38,7 +38,7 @@ A tiny blue-and-white companion for your Codex desktop.
 
 ### 手动安装
 
-1. [下载 Xiaoba-pet.zip](https://github.com/hardwork-xu/xiaoba-codex-pet/releases/latest/download/Xiaoba-pet.zip)，解压后打开 `Xiaoba` 文件夹。
+1. [下载 Xiaoba-pet.zip](https://github.com/hardwork-xu/codex-xiaoba-animated-pet/releases/latest/download/Xiaoba-pet.zip)，解压后打开 `Xiaoba` 文件夹。
 2. 在 Finder 中按 **⌘⇧G**，输入 `~/.codex/pets/`。目录不存在时，先在 `~/.codex/` 下创建 `pets` 文件夹。
 3. 在 `pets` 中创建 `xiaoba` 文件夹，将包内的 **`pet.json` 和 `spritesheet.webp`** 一起复制进去。已有同名宠物时，先备份旧文件。
 4. 在 **Settings → Pets** 中点击 **Refresh** 并选择 **Xiaoba**。若没有浮层，使用 **Show pet** 或输入 `/pet`。这些入口见 [OpenAI 官方 Pets 说明](https://learn.chatgpt.com/docs/pets?surface=app)。
@@ -66,15 +66,15 @@ bash install.sh
 ### 常见问题
 
 - **列表里没出现？** 确认两个文件直接位于 `pets/xiaoba/` 下，没有多套一层文件夹，再点 Refresh；必要时重新打开 Codex。
-- **看不到 Pets 设置？** 当前 Codex 版本需要具备该功能；可以先用[在线预览](https://hardwork-xu.github.io/xiaoba-codex-pet/)体验小八。
+- **看不到 Pets 设置？** 当前 Codex 版本需要具备该功能；可以先用[在线预览](https://hardwork-xu.github.io/codex-xiaoba-animated-pet/)体验小八。
 - **只想看动画？** 双击包内的 `index.html`，或打开在线预览。选择“环视”后在展示区域移动鼠标；回到中心会恢复待机。
 - **想卸载？** 在 Codex 中切换到其他宠物，再移走 `pets/xiaoba/` 文件夹即可。
 
 ## English quick start
 
-Download and unzip the [pet package](https://github.com/hardwork-xu/xiaoba-codex-pet/releases/latest/download/Xiaoba-pet.zip). Copy `pet.json` and `spritesheet.webp` into `~/.codex/pets/xiaoba/`, or run `bash install.sh` from the extracted folder. In a Codex desktop build with custom Pets support, select **Refresh → Xiaoba** in **Settings → Pets**. Use **Show pet** or `/pet` to show the floating companion. If you use `CODEX_HOME`, install under that directory instead.
+Download and unzip the [pet package](https://github.com/hardwork-xu/codex-xiaoba-animated-pet/releases/latest/download/Xiaoba-pet.zip). Copy `pet.json` and `spritesheet.webp` into `~/.codex/pets/xiaoba/`, or run `bash install.sh` from the extracted folder. In a Codex desktop build with custom Pets support, select **Refresh → Xiaoba** in **Settings → Pets**. Use **Show pet** or `/pet` to show the floating companion. If you use `CODEX_HOME`, install under that directory instead.
 
-You can also [try the interactive demo](https://hardwork-xu.github.io/xiaoba-codex-pet/) or open `index.html` locally. If Xiaoba makes your day a little nicer, a **Star** is always appreciated!
+You can also [try the interactive demo](https://hardwork-xu.github.io/codex-xiaoba-animated-pet/) or open `index.html` locally. If Xiaoba makes your day a little nicer, a **Star** is always appreciated!
 
 ## 文件与兼容性
 
@@ -96,6 +96,6 @@ You can also [try the interactive demo](https://hardwork-xu.github.io/xiaoba-cod
 
 ## 分享与反馈
 
-欢迎把[仓库链接](https://github.com/hardwork-xu/xiaoba-codex-pet)发给朋友。发现动作问题时，可以在 [Issues](https://github.com/hardwork-xu/xiaoba-codex-pet/issues) 留下动作名称和截图，方便修复。
+欢迎把[仓库链接](https://github.com/hardwork-xu/codex-xiaoba-animated-pet)发给朋友。发现动作问题时，可以在 [Issues](https://github.com/hardwork-xu/codex-xiaoba-animated-pet/issues) 留下动作名称和截图，方便修复。
 
 **喜欢小八，请点一下右上角的 ⭐ Star。谢谢你收养它！**
